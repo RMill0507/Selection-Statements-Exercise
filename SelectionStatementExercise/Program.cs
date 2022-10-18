@@ -1,9 +1,13 @@
-﻿namespace SelectionStatementExercise
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace SelectionStatementExercise
 {
     public class Program
     {
-        static void Main(string[] args)
-        {
+        
+      static void Main(string[] args)
+        { 
+           //------exercise 1-------
             int favNumber = 4;
 
             string input = Console.ReadLine();
@@ -22,8 +26,36 @@
             {
                 Console.WriteLine("CORRECT, HOW DID YOU GUESS THAT?");
             }
-            
-        }  
+            //------exercise 2-------
+
+            Console.WriteLine("What is your favorite subject in school?");
+            var subject = Console.ReadLine();
+
+            switch (subject)
+            {
+                case "Math":
+                    Console.WriteLine("Math is one the most useful subjects there is! ");
+                    break;
+
+                case "History":
+                    Console.WriteLine("History is in the making if its your favorite subject");
+                    break;
+                case "English":
+                    Console.WriteLine("English is a very cool subject");
+                    break;
+                case "Science":
+                    Console.WriteLine("Science experiments are always fun!");
+                    break;
+                case "Spanish":
+                    Console.WriteLine("Learning a new language is very beneficial");
+                    break;
+                default:
+                    Console.WriteLine($"Thats a very interesting subject to like! {subject} sounds like its really cool!");
+                    break ;
+                    
+            }
+              
+        }    
     }
     
 }
